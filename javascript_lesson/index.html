@@ -5,6 +5,20 @@
     <title> Java</title>
 </head>
 <body>
+<div id="deneme"></div>
+<p class="result"></p>
+<p class="result"></p>
+<input type="text" name="fname"/><br>
+<a href="#"></a>
+<script>
+    document.write("body etiketinin en alt kısmına mesajı ekler");
+    window.alert("pencerede yeni bir ekran açar. Sadece alert olarakta kullanılabilir.");// alert("javascipt öğreniyorum");
+    console.log("consol bölümüne mesajı yazar.");
 
+    document.getElementById("deneme").innerHTML="getElementById ile referans al.<br>";
+    document.getElementsByClassName("result")[0].innerHTML="getElementsByClassName ile referans al.<br>";
+    document.getElementsByName("fname")[0].value="getElementsByName ile referans al.";
+    document.getElementsByTagName("a")[0].innerText="getElementsByTagName ile referans al.<br>";
+</script>
 </body>
 </html>
