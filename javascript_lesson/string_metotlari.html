@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Events</title>
+</head>
+<body>
+
+
+<script>
+    let metin="Ben bugün react-native programlamaya başladım. react-native çok güzel bir framework";
+
+    document.write(metin);
+
+    let len=metin.length; //karakter sayısı
+    // alert(len);
+
+    let pos=metin.indexOf("react"); //tırnak içinde yazılan değeri ilk gördüğü yerin konumunu integer olarak verir. boşlukları saymaz
+    // alert(pos);
+
+    let pos2=metin.lastIndexOf("react"); //tırnak içinde yazılan değeri son gördüğü yerin konumunu integer olarak verir. boşlukları saymaz
+    // alert(pos2);
+
+    let pos3=metin.search("çok");
+    // alert(pos3);
+
+    //-----metin parçalama----
+    let sl=metin.slice(0,10); //verilen aralıktaki kelimeleri döndürür. - değer alır. eğer değeri eksiyse sondan başlar
+    // alert(sl);
+
+    let sub=metin.substring(0,10); //verilen aralıktaki kelimeleri döndürür. - değerler çalışmaz
+    // alert(sub);
+
+    let subs=metin.substr(0,10); //slice ile aynıdır. Tek farkı substr 2 parametresi sıra değil kelime aldır.
+    // alert(sub);
+
+    //----metin değiştirme----
+
+    // var newText=metin.replace('react-native','reactNative'); ilk gördüğünü değiştririr
+    var newText=metin.replace(/react-nativ/g,'reactNative'); //hepsini değiştirir
+    // alert( newText);
+
+    //---karakter işlemleri---
+    var upper=metin.toUpperCase(); //Hepsi büyük karakter
+    // alert(upper);
+
+    var lower=metin.toLowerCase(); //hepsi küçük karakter
+    // alert(lower);
+
+    //---birleştirme işlemi--
+    let fname="Ayşe";
+    let lname="Yılmaz";
+    let full_name=fname.concat(' ',lname); //birleştirme işlemi yapar
+    // alert(full_name);
+
+    let char=metin.charAt(5); //sıradaki karakteri alır
+    // alert(char);
+
+
+    //split--
+    let veri="Ali;Ayşe;Metin;Elif";
+    let split_text=veri.split(';');
+    console.log(split_text);
+
+</script>
+
+</body>
+</html>

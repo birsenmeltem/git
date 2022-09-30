@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Events</title>
+</head>
+<body>
+
+<button onclick="this.innerHTML='Değişti'">Hesapla</button>
+<select onchange="document.getElementById('container').innerText=this.value;">
+    <option>Ankara</option>
+    <option>İstanbul</option>
+    <option>Bursa</option>
+</select>
+
+<div id="container"></div>
+
+<br>
+Sayı 1 <input type="text" id="sayi1">
+Sayı 2 <input type="text" id="sayi2">
+<button onclick="toplam()">+</button>
+<button onclick="fark()">-</button>
+<button onclick="carpim()">*</button>
+<button onclick="bolum()">/</button>
+<button onclick="hesapla(this)" data-isaret="+">+</button>
+<button onclick="hesapla(this)" data-isaret="-">-</button>
+<button onclick="hesapla(this)" data-isaret="*">*</button>
+<button onclick="hesapla(this)" data-isaret="/">/</button>
+<br>
+<strong>Sonuç</strong>
+<div id="sonuc"></div>
+
+<script>
+    let sonuc=document.getElementById('sonuc'),
+        sayi1=document.getElementById('sayi1'),
+        sayi2=document.getElementById('sayi2');
+    function hesapla(ths)
+    {
+        let veri=$(ths).data("isaret");
+        sonuc.innerHTML=parseInt(sayi1.value)+veri+parseInt(sayi2.value);
+    }
+    function toplam()
+    {
+
+        let sayi1=document.getElementById('sayi1').value,
+            sayi2=document.getElementById('sayi2').value;
+        sonuc.innerHTML=parseInt(sayi1)+parseInt(sayi2);
+    }
+    function fark()
+    {
+        let sayi1=document.getElementById('sayi1').value,
+            sayi2=document.getElementById('sayi2').value;
+        sonuc.innerHTML=parseInt(sayi1)-parseInt(sayi2);
+    }
+    function carpim()
+    {
+        let sayi1=document.getElementById('sayi1').value,
+            sayi2=document.getElementById('sayi2').value;
+        sonuc.innerHTML=parseInt(sayi1)*parseInt(sayi2);
+    }
+    function bolum()
+    {
+        let sayi1=document.getElementById('sayi1').value,
+            sayi2=document.getElementById('sayi2').value;
+        sonuc.innerHTML=parseInt(sayi1)/parseInt(sayi2);
+    }
+</script>
+
+</body>
+</html>

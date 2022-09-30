@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Object</title>
+</head>
+<body>
+<div id="deneme"></div>
+<p class="result"></p>
+<p class="result"></p>
+<input type="text" name="fname"/><br>
+<a href="#"></a>
+<script>
+
+    //Özellikleri
+    let araba={
+        name:"BMV",
+        model:"1.16",
+        weight:1000,
+        color:"white",
+        year: 2009, //objenin özelliği
+        start: function (){ //objenin metodu
+            alert("Araba çalıştı!!!");
+        },
+        drive: function (){
+            alert("Araba hareket ediyor...");
+        },
+        break: function (){
+            alert("Araba fren yaptı.");
+        },
+        stop: function (){
+            alert("Araba durdu!!!");
+        },
+        getInfo:function (){
+            console.log("Ad : "+personel.name);
+            console.log("Araç : "+this.name);
+            console.log("Model : "+this.model);
+            console.log("Ağırlık : "+this.weight);
+            console.log("Renk : "+this.color);
+        },
+        getAge:function (){
+            return 2022-this.year;
+        }
+    };
+    let personel={
+        name:"Ali",
+    }
+    console.log(araba);
+
+    //Özelliklere ulaşmak
+    document.getElementsByTagName("p")[0].innerHTML=araba.name;
+    document.getElementsByTagName("p")[1].innerHTML=araba["color"];
+
+    //Özellik değeri değiştirme
+    araba.color="black";
+    araba["weight"]=1100;
+
+    console.log(araba);
+
+    araba.start();
+    araba.drive();
+    araba.break();
+    araba.stop();
+    araba.getInfo();
+    alert("Araç "+araba.getAge()+" yaşında");
+</script>
+</body>
+</html>

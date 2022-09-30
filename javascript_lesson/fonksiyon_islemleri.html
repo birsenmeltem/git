@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Java</title>
+</head>
+<body>
+
+<input type="text" name="deger"/><br>
+<div id="sonuc">
+
+</div>
+<button type="button" onclick="hesapla()"> Hesapla</button>
+<a href="#"></a>
+<script>
+
+    function fahrenheit(F){
+        return (9/5)*(F-32);
+    }
+    function hesapla()
+    {
+        let veri=document.getElementsByName('deger')[0].value;
+        let fah=fahrenheit(veri);
+        console.log(veri)
+        console.log(fah)
+        document.getElementById('sonuc').innerHTML=fah;
+    }
+</script>
+</body>
+</html>
