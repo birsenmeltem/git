@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Java</title>
+</head>
+<body>
+
+<script>
+    /* pi sayısı */
+    console.log(Math.PI);
+
+    // yuvarla
+    var x=4.7,y=4.3;
+    console.log(Math.round(x)); //sonucu 5 döndürür
+    console.log(Math.round(y)); //sonucu 4 döndürür
+
+    console.log(Math.ceil(x)); //sonucu 5 döndürür -> her zaman sayıyı bir üst tamsayıya yuvarlar
+    console.log(Math.ceil(y)); //sonucu 5 döndürür -> her zaman sayıyı bir üst tamsayıya yuvarlar
+
+    console.log(Math.floor(x)); //sonucu 3 döndürür -> her zaman sayıyı bir alt tamsayıya yuvarlar
+    console.log(Math.floor(y)); //sonucu 3 döndürür -> her zaman sayıyı bir alt tamsayıya yuvarlar
+
+    // karaesini al
+    console.log(Math.pow(2,5)); //sonucu 32 olarak söndürür
+
+    //karekökünü al
+    console.log(Math.sqrt(25)); //sonucu 5 döndürür
+
+    //mutlkak değer
+    console.log(Math.abs(-4.7)); //sonucu 4.7 döndürür
+
+    //minimum değer
+    console.log(Math.min(0,5,45,54545,-45)); //sonucu -45 döndürür. birden fazla değer alabilir
+
+    // maximum değer
+    console.log(Math.max(0,5,45,54545,-45)); //sonucu 54545 döndürür. birden fazla değer alabilir
+
+    // rasgele sayı
+    console.log(Math.random()); // 0 ile 1 arasında ragele sayı üretir
+    console.log(Math.random()*100); //sayı veya string değer eklenebilir
+</script>
+</body>
+</html>

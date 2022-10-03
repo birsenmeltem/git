@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Java</title>
+</head>
+<body>
+<script>
+    let personel_listesi=["Ayşe","Veli","Ahmet","Ali",true]
+    console.log(personel_listesi);
+    console.log(personel_listesi[0]);
+
+    let araba_listesi=new Array("bmw","volvo","fiat");
+    console.log(araba_listesi);
+    console.log(araba_listesi[2]);
+
+    personel_listesi[4]="Elif"; //true değiri Elif olarak değişir
+    console.log(personel_listesi[4]);
+
+
+    // ------ en çok kullanılan komutlar ------
+
+    // length
+    console.log(personel_listesi.length); //dizideki eleman sayısını döner
+    // toString
+    console.log(personel_listesi.toString()); //elemanları diziden çıkararak string bir ifadeye dönüştürür aralarına virgül ekler
+    // join
+    console.log(personel_listesi.join("|")); //elemanları diziden çıkararak string bir ifadeye dönüştürür aralarına belirttiğimiz noktalama işaretini ekler
+    //pop
+    console.log(personel_listesi.pop()); //diziden son elemanı çıkarır
+    // push
+    console.log(personel_listesi.push("Can")); //dizinin sonuna belirtilen değeri eleman olarak ekler
+    // shift
+    console.log(personel_listesi.shift()); //dizinin ilk elemanını çıkarır
+    // unshift
+    console.log(personel_listesi.unshift("Derya")); //dizinin başına belirtilen değeri eleman olarak ekler
+    //splice
+    console.log(personel_listesi.splice(2,1,"Pelin")); //dizinin ikinci elemanına gider pelin olarak değiştirir
+    console.log(personel_listesi.splice(2,0,"Pelin")); //dizinin ikinci elemanına gider hemen önüne yeni bir elaman ekler.
+    console.log(personel_listesi.splice(2,2,"Pelin")); //dizinin ikinci elemanına gider hemen sonrasındaki elemanı değiştirir.
+    console.log(personel_listesi.splice(0,2)); //dizinin 0 ve 2 elemanını siler
+    //concat
+    let topluliste=personel_listesi.concat(araba_listesi);
+    console.log(topluliste);//iki dizeyi birleştirir.
+    //reserve
+    console.log(personel_listesi.reverse()); //dizinin elemanlarını tersten listeler
+</script>
+</body>
+</html>
