@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Java</title>
+</head>
+<body>
+<div style="display: grid; grid-template-columns: auto auto;grid-gap: 1rem">
+    <div style="display: grid; grid-template-columns: auto auto;grid-gap: 1rem">
+        <div>
+            Mail Adresi :
+        </div>
+        <div>
+            <input type="text" name="" id="mail">
+        </div>
+        <div>
+            Şifre:
+        </div>
+        <div>
+            <input type="text" name="" id="sifre">
+        </div>
+        <div>
+            <button onclick="giris()"> Giriş </button>
+        </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: auto auto;grid-gap: 1rem">
+        <div>
+            Haftanın Günü:
+        </div>
+        <div>
+            <input type="text" id="hafta">
+        </div>
+        <div>
+            <button onclick="hafta()">Günü Getir</button>
+        </div>
+    </div>
+    <div>
+        <button onclick="listele()"> Personelleri Listele</button>
+    </div>
+
+</div>
+<div id="container" style="margin-top: 2rem"></div>
+
+<script>
+    let kullanici_mail="info@gmail.com",
+        kullanici_sifre="12345",
+        personel_listesi=["Ayşe","Veli","Ahmet","Ali","Can","Pelin","Derya","Hakan","Elif","Murat","Mustafa"];
+    function giris(){
+        let mail=document.getElementById("mail").value,
+            sifre=document.getElementById("sifre").value;
+        if(kullanici_mail==mail && kullanici_sifre==sifre){
+            document.getElementById("container").innerHTML='<div style="background-color: rgb(106,255,158);color: black">Giriş Başarılı</div>';
+        }
+        else{
+            document.getElementById("container").innerHTML="<div style=\"background-color: rgb(255,104,108);color: white\">Bilgiler Hatalı</div>";
+        }
+    }
+    function hafta(){
+        let hafta=document.getElementById("hafta").value;
+
+        switch (parseInt(hafta)){
+            case 1:
+                document.getElementById("container").innerHTML='<div style="background-color: rgb(106,255,158);color: black;padding:2rem">Pazartesi</div>';
+                break;
+            case 2:
+                document.getElementById("container").innerHTML='<div style="background-color: rgb(106,255,158);color: black;padding:2rem">Salı</div>';
+                break;
+            case 3:
+                document.getElementById("container").innerHTML='<div style="background-color: rgb(106,255,158);color: black;padding:2rem">Çarşamba</div>';
+                break;
+            case 4:
+                document.getElementById("container").innerHTML='<div style="background-color: rgb(106,255,158);color: black;padding:2rem">Perşembe</div>';
+                break;
+            case 5:
+                document.getElementById("container").innerHTML='<div style="background-color: rgb(106,255,158);color: black;padding:2rem">Cuma</div>';
+                break;
+            case 6:
+                document.getElementById("container").innerHTML='<div style="background-color: rgb(106,255,158);color: black;padding:2rem">Cumartesi</div>';
+                break;
+            case 7:
+                document.getElementById("container").innerHTML='<div style="background-color: rgb(106,255,158);color: black;padding:2rem">Pazar</div>';
+                break;
+            default:
+                document.getElementById("container").innerHTML="<div style=\"background-color: rgb(255,104,108);color: white;padding:2rem\">Lütfen 1 ile 7 arasında bir sayı giriniz.</div>";
+                break;
+        }
+    }
+    function listele(){
+        for(let i=0;i<personel_listesi.length;i++){
+            document.getElementById("container").innerHTML+="<div style=\"background-color: rgb(104,220,255);color: white;padding:2rem\">"+personel_listesi[i]+"</div>";
+        }
+    }
+</script>
+</body>
+</html>
