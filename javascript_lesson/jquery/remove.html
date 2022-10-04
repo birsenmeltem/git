@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Java</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+<button>Sil</button>
+<div class="container">
+    Bu bir deneme metnidir...
+</div>
+
+
+<script>
+    $(document).ready(function (){
+        $("button").click(function (){
+            $(".container").remove(); //containeri siler
+        });
+    });
+</script>
+</body>
+</html>

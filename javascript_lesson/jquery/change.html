@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Java</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+<input type="text" class="name">
+<input type="text" class="last_name">
+<div class="result"></div>
+<hr>
+<select id="il">
+    <option value="İstanbul">İstanbul</option>
+    <option value="Bursa">Bursa</option>
+    <option value="İzmir">İzmir</option>
+    <option value="Ankara">Ankara</option>
+</select>
+<div class="container"></div>
+<script>
+    $(document).ready(function () {
+        $(".name").change(function (){
+            $(".result").text($(this).val());
+        });
+        $(".last_name").change(function (){
+            $(".result").text($(".result").text()+" "+$(this).val());
+        });
+        $("#il").change(function (){
+           let veri=$(this).val();
+           $(".container").text(veri);
+        });
+    });
+</script>
+</body>
+</html>

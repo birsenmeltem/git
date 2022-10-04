@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Java</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+<input type="text">
+<div class="result"></div>
+
+<script>
+    $(document).ready(function () {
+        //klavyede herhangi bir tuşa basıldığında çalışır.
+        $("input").keydown(function(e){
+            if(e.keyCode== 13) //bize veriyi askicode olarak verir
+            $(".result").text("Enter tuşuna basıldı.");
+        });
+    });
+</script>
+</body>
+</html>

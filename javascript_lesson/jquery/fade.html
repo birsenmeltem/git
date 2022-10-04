@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Java</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <style>
+        .container{
+            display: none;
+            width: 200px;
+            border: 2px solid #ffb444;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .container2{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            column-gap: 1rem;
+            width: 300px;
+            background: antiquewhite;
+            padding: 1rem;
+            margin: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div style="display: grid;grid-template-columns: auto auto; column-gap: 1rem">
+    <div>
+        <div class="container2">
+            <button id="goster">Göster</button>
+            <button id="gizle">Gizle</button>
+            <button id="gostergizle">Göster/Gizle</button>
+        </div>
+        <div class="container2">
+            <button id="gostersaniye">3 saniyede Göster</button>
+            <button id="gizlesaniye">3 saniyede Gizle</button>
+            <button id="gostergizlesaniye">3 saniyede Göster/Gizle</button>
+        </div>
+        <div class="container2">
+            <button id="yavasgoster">Yavaş Göster</button>
+            <button id="yavasgizle">Yavaş Gizle</button>
+            <button id="yavasgostergizle">Yavas Göster/Gizle</button>
+        </div>
+        <div class="container2">
+            <button id="hizligoster">Hızlı Göster</button>
+            <button id="hizligizle">Hızlı Gizle</button>
+            <button id="hizligostergizle">Hızlı Göster/Gizle</button>
+        </div>
+        <div class="container2">
+            <button id="ozel">Özel</button>
+        </div>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur distinctio ea eaque ex ipsum, laudantium,
+        maiores non quae, quam recusandae tempora velit. Laudantium nihil possimus quia quisquam suscipit velit voluptatem!
+    </div>
+
+</div>
+<script>
+    $(document).ready(function () {
+        //göster
+        $("#goster").click(function (){
+           $(".container").fadeIn(); //otomatik
+        });
+        $("#gostersaniye").click(function (){
+           $(".container").fadeIn(3000); //milisaniye değeri alır
+        });
+        $("#yavasgoster").click(function (){
+           $(".container").fadeIn("slow"); //yavaş
+        });
+        $("#hizligoster").click(function (){
+           $(".container").fadeIn("fast"); //hızlı
+        });
+        //gizle
+        $("#gizle").click(function (){
+            $(".container").fadeOut(); //otomatik
+        });
+        $("#gizlesaniye").click(function (){
+            $(".container").fadeOut(3000); //milisaniye değeri alır
+        });
+        $("#yavasgizle").click(function (){
+           $(".container").fadeOut("slow"); //yavaş
+        });
+        $("#hizligizle").click(function (){
+           $(".container").fadeOut("fast"); //hızlı
+        });
+        //göster gizle
+        $("#gostergizle").click(function (){
+            $(".container").fadeToggle(); //otomatik
+        });
+        $("#gostergizlesaniye").click(function (){
+            $(".container").fadeToggle(3000); //milisaniye değeri alır
+        });
+        $("#yavasgostergizle").click(function (){
+           $(".container").fadeToggle("slow"); //yavaş
+        });
+        $("#hizligostergizle").click(function (){
+           $(".container").fadeToggle("fast"); //hızlı
+        });
+        //özelleştirilmiş
+        $("#ozel").click(function (){
+            $(".container").fadeTo("slow",.5,function (){
+                $(".container").css("color","#f44578");
+            }); //ilk değer hızı,ikinci değer saydamlığı, üçüncü değeri ise fonksiyon alır
+        });
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Java</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <style>
+        ul{
+            margin: 0;
+            padding: 0;
+            width: 200px;
+        }
+        ul li{
+            padding: 5px 10px;
+            border: 1px solid #eee;
+            margin-bottom: 5px;
+        }
+        ul li:hover{
+            background-color: #eee;
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li>Ahmet <span>50</span></li>
+    <li>Ayşe <span>100</span></li>
+    <li>Veli <span>80</span></li>
+    <li>Ali <span>75</span></li>
+    <li>Pelin <span>45</span></li>
+</ul>
+<div class="result"></div>
+
+<script>
+    $(document).ready(function () {
+        /*
+        each metodu foreach gibidir. Belirtilen elemanları bize döndürür.
+        iki değer alır. Biri index(kaçıncı sırada), diğeride element değeri.
+        */
+        let toplam=0;
+        $("ul li").each(function (index,element){ //ul altındaki li elemanlarını döndürür.
+            console.log(index); //elemanların sıralarını bize verir foreachtaki key gibi "0,1,2,3,4"
+            console.log(element); //value gibi bize değerleri verir. "ahmet <span>50</span>" diye veri döndürür
+            let ders_notu=$(element).find("span").text(); //find ile span altındaki ders notlarını buluruz ve text metodu ile alırız.
+            toplam+=parseInt(ders_notu); //bulunan ders notlarını alırız. ders notları text olduğu için parse ile sayıya çeviririz
+
+        });
+        $(".result").html("Toplam: <span style='color: #8380cb'>"+toplam+"</span>");
+    });
+</script>
+</body>
+</html>

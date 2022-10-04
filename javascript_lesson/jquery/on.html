@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Java</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+<button class="btnekle">Sil butonu ekle</button>
+<div class="container">
+    Bu bir deneme metnidir...
+</div>
+<button class="sil">Sil</button>
+
+
+<script>
+    $(document).ready(function () {
+        $(".btnekle").click(function () {
+            $(".sil").after("<br><button class='sil'>Eklenen Sil</button>")
+        });
+
+        /* bu fonksiyon sadece sayfa yüklendiği zaman clası sil olan elementleri görüp çalışır.
+        Sonradan eklenen sil claslı elementleri görmez.
+        Bu yüzden on fonksiyonu kullanılır. */
+        $(".sil").click(function () {
+            $(".container").remove(); //containeri siler
+        });
+
+        /*
+        on metodu 3 parametre alır. birincisi hangi işlemden sonra işleme gireceği, ikincisi hangi elemanlar geçerli, üçüncüsü komutlar
+        */
+        $("body").on("click", ".sil", function () {
+            $(".container").remove(); //containeri siler
+        });
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Java</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+<input type="text">
+<div class="result"></div>
+
+<script>
+    $(document).ready(function () {
+        //tuşu bıraktıpımızda çalışır
+        $("input").keydown(function (){
+            $(".result").text("Tuşa bastınız..");
+        });
+        $("input").keyup(function (){
+            $(".result").text("Tuşu bıraktınız..");
+        })
+    });
+</script>
+</body>
+</html>

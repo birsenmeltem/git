@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Java</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+
+</head>
+<body>
+<button id="bul">Bul</button>
+<div class="container">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cum deleniti deserunt dolorem eius error
+        exercitationem magnam maxime molestias, nihil obcaecati odio officiis perspiciatis quisquam quo reiciendis ullam
+        ut voluptatem!
+        <span>Deneme metin</span>
+    </p>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#bul").click(function (){
+           $(".container").find("span").css("color","#f81"); //arama yapar
+        });
+
+    });
+</script>
+</body>
+</html>

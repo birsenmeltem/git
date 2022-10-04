@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Java</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+<button>Veriyi Değiştir</button>
+<div class="container">
+    Bu bir deneme metnidir...
+</div>
+<hr>
+<div class="result"></div>
+
+
+<script>
+    $(document).ready(function (){
+        let text=$(".container").text(); //metni okur
+       $("button").click(function (){
+           $(".result").text("Değiştirilmiş metin..."); //metni değiştirir
+       });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Java</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+<button class="myBtn">Tıkla</button>
+<div class="container">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium consequatur culpa, delectus deserunt dolor dolores ducimus earum eius id incidunt laudantium maiores minus molestias, mollitia perspiciatis repellendus reprehenderit? Aut!
+</div>
+<hr>
+<div class="click">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum nihil optio rem sed tenetur! Aspernatur enim itaque nam non nostrum nulla pariatur quas quasi quisquam ratione. Ad fugit minus odit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur cum cumque cupiditate dolorum, earum eius eligendi et fugit minima modi numquam officiis quae quia sequi soluta totam vel! Itaque?
+</div>
+<script>
+    $(document).ready(function (){
+        $(".myBtn").click(function (){
+            $(".container").css({
+                backgroundColor: "#7177f3",
+                color:"#fff",
+            });
+        });
+        $(".click").click(function(){
+           $(".click").css({"background-color": "#77cbff",
+           width:"200px"})
+        });
+    });
+</script>
+</body>
+</html>

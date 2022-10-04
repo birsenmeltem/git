@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Java</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <style>
+        ul{
+            margin: 0;
+            padding: 0;
+            width: 200px;
+        }
+        ul li{
+            padding: 5px 10px;
+            border: 1px solid #eee;
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li>1. Eleman
+        <a href="#" class="itemsil">Sil</a>
+    </li>
+    <li>2. Eleman
+        <a href="#" class="itemsil">Sil</a>
+    </li>
+    <li>3. Eleman
+        <a href="#" class="itemsil">Sil</a>
+    </li>
+    <li>4. Eleman
+        <a href="#" class="itemsil">Sil</a>
+    </li>
+    <li>5. Eleman
+        <a href="#" class="itemsil">Sil</a>
+    </li>
+    <li>6. Eleman
+        <a href="#" class="itemsil">Sil</a>
+    </li>
+    <li>7. Eleman
+        <a href="#" class="itemsil">Sil</a>
+    </li>
+</ul>
+
+<script>
+    $(document).ready(function () {
+
+        $("ul li").hover(function (){
+            $(this).css({
+                backgroundColor:"#eee",
+            });
+        },function (){
+            $(this).css({
+                backgroundColor:"#fff",
+            });
+        });
+    });
+</script>
+</body>
+</html>

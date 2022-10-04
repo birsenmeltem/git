@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Java</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+Yaşınız: <input type="text">
+<select name="il">
+    <option value="Ankara">Ankara</option>
+    <option value="İstanbul">İstanbul</option>
+    <option value="Bursa">Bursa</option>
+</select>
+<button id="gonder">Gönder</button>
+<button id="degistir">Değiştir</button>
+<button id="ilgetir">İl Getir</button>
+
+
+
+<script>
+    $(document).ready(function (){
+        $("#gonder").click(function (){
+            let veri=$("input").val(); //değer al
+            alert("Doğum Yılınız:"+(2022-veri));
+        });
+        $("#degistir").click(function (){
+            let veri=$("input").val();
+            $("input").val(parseInt(veri)+4)
+        });
+        $("#ilgetir").click(function (){
+            let veri=$("input").val(),
+                il=$("select").val();
+            $("input").val(veri+" "+ il)
+        })
+    });
+</script>
+</body>
+</html>

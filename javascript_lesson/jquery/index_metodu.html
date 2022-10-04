@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title> Java</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <style>
+        ul{
+            margin: 0;
+            padding: 0;
+            width: 200px;
+        }
+        ul li{
+            padding: 5px 10px;
+            border: 1px solid #eee;
+            margin-bottom: 5px;
+        }
+        ul li:hover{
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>1. Eleman
+        <a href="#" class="itemsil">Sil</a>
+    </li>
+    <li>2. Eleman
+        <a href="#" class="itemsil">Sil</a>
+    </li>
+    <li>3. Eleman
+        <a href="#" class="itemsil">Sil</a>
+    </li>
+    <li>4. Eleman
+        <a href="#" class="itemsil">Sil</a>
+    </li>
+    <li>5. Eleman
+        <a href="#" class="itemsil">Sil</a>
+    </li>
+    <li>6. Eleman
+        <a href="#" class="itemsil">Sil</a>
+    </li>
+    <li>7. Eleman
+        <a href="#" class="itemsil">Sil</a>
+    </li>
+</ul>
+
+<script>
+    $(document).ready(function () {
+        $("ul li").on("click",function (){
+           let veri1=$(this).index(); //dizi olduğu için sıfırdan başlar. Bize kaçıncı eleman olduğu söyler
+           let veri2=$(this).index()+1; //eğer birden başlamısını istiyorsak +1 yazıp kullanırız
+           // alert(veri1);
+           alert(veri2 +" sıradaki elemente tıkladınız");
+        });
+    });
+</script>
+</body>
+</html>

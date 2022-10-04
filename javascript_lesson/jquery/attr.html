@@ -6,7 +6,7 @@
     <script src="js/jquery-3.6.1.min.js"></script>
 </head>
 <body>
-<div class="container">
+<div class="container" data="lorem impus">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam architecto distinctio dolorem doloremque tempora tenetur! Beatae culpa dignissimos dolorem, eius eveniet labore mollitia omnis quos saepe ullam vero, vitae.
 </div>
 <hr>
@@ -15,12 +15,13 @@
 </div>
 
 <script>
-    $(".container").css("color","red");
-    $(".container2").css({
-        color:"#f98fd6",
-        fontsize:"20px",
-        backgroundColor:"black",
-    })
+    $(document).ready(function (){
+       $(".container").attr("id","testContainer"); //ekleme veya değiştirme metodu
+
+       alert($(".container").attr("data")); //okuma komutu
+
+       $(".container").removeAttr("data"); //silme komutu
+    });
 </script>
 </body>
 </html>
