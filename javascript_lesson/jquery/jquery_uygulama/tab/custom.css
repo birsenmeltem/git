@@ -1,0 +1,40 @@
+body{
+    font-family: "Trebuchet MS";
+}
+.clear{
+    clear: both;
+}
+.tab{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 379px;
+    height: 50px;
+    background-color: #d199ec;
+}
+.tab li{
+    float: left;
+    padding: 5px 20px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}
+.tab li.active{
+    background-color: #af80c5;
+    color: white;
+    border-bottom: 2px solid #af80c5;
+}
+.tab li:hover{
+    color: mintcream;
+    border-bottom: 2px solid #af80c5;
+}
+.tab-content{
+    height: 500px;
+    padding-top: 20px;
+}
+.tab-content div{
+    height: 300px;
+    width: 600px;
+    background-color: antiquewhite;
+    padding: 10px;
+}
